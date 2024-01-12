@@ -10,6 +10,7 @@ Aplikasi Penjualan Barang ini menggunakan sebuah Aplikasi Editor yaitu Lazarus y
 
 ***Komponen - Komponen***
 <br>
+
 **1. Aplikasi Lazarus**
 <br>
 **2. ODBC Connector**
