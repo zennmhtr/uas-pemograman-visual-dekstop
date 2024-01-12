@@ -13,11 +13,9 @@ Kelas : TI.21.A3
 
 **Komponen - Komponen**
 1. Aplikasi Lazarus**
-</br>
 2. ODBC Connector**
-</br>
 3. XAMPP v3.3.0**
-</br>
+
 
 **Video Demo Aplikasi**
 </br>
