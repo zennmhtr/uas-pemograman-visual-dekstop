@@ -4,11 +4,11 @@ Aplikasi Penjualan Barang ini menggunakan sebuah Aplikasi Editor yaitu Lazarus y
 
 ***Tugas UAS Pemograman Visual Dekstop***
 </br>
-    Nama  : Zaini Muhtarom
+- Nama     : Zaini Muhtarom
 </br>
-    NIM   : 312110294
+- NIM      : 312110294
 </br>
-    Kelas : TI . 21 . A3
+- Kelas    : TI . 21 . A3
 </br>
 
 ***Komponen - Komponen***
