@@ -7,13 +7,13 @@ Aplikasi Penjualan Barang ini menggunakan sebuah Aplikasi Editor yaitu Lazarus y
 - Nama     : Zaini Muhtarom
 - NIM      : 312110294
 - Kelas    : TI . 21 . A3
-</br>
+
 ***Komponen - Komponen***
 1. Aplikasi Lazarus**
 2. ODBC Connector**
 3. XAMPP v3.3.0**
-</br>
+
 ***Video Demo Aplikasi***
-<br>
+
 **Link ( https://youtu.be/ZaZmXPE1O28 )**
 </br>
