@@ -11,9 +11,11 @@ Aplikasi Penjualan Barang ini menggunakan sebuah Aplikasi Editor yaitu Lazarus y
 ***Komponen - Komponen***
 <br>
 **1. Aplikasi Lazarus**
+<br>
 **2. ODBC Connector**
+<br>
 **3. XAMPP v3.3.0**
-</br>
+
 ***Video Demo Aplikasi***
 
 **Link ( https://youtu.be/ZaZmXPE1O28 )**
