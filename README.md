@@ -5,16 +5,20 @@ Aplikasi Penjualan Barang ini menggunakan sebuah Aplikasi Editor yaitu Lazarus y
 **Tugas UAS Pemograman Visual Dekstop**
 </br>
 Nama  : Zaini Muhtarom
+</br>
 NIM   : 312110294
+</br>
 Kelas : TI.21.A3
+</br>
 
 **Komponen - Komponen**
 1. Aplikasi Lazarus**
-
+</br>
 2. ODBC Connector**
-
+</br>
 3. XAMPP v3.3.0**
-
+</br>
 
 **Video Demo Aplikasi**
+</br>
 Link ( https://youtu.be/ZaZmXPE1O28 )
