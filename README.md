@@ -15,6 +15,6 @@ Aplikasi Penjualan Barang ini menggunakan sebuah Aplikasi Editor yaitu Lazarus y
 3. XAMPP v3.3.0**
 </br>
 ***Video Demo Aplikasi***
-</br>
-
+<br>
 **Link ( https://youtu.be/ZaZmXPE1O28 )**
+</br>
