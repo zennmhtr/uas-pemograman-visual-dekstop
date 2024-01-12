@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="D:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1469148810"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -WG -l -vewnhibq -FiC:\UAS_PEMROGRAMAN_VISUAL\UAS_PEMROGRAMAN_VISUAL\backup\lib\x86_64-win64 -FuD:\lazarus\components\sqldb\lib\x86_64-win64\win32 -FuD:\lazarus\components\lazreport\source\lib\x86_64-win64 -FuD:\lazarus\components\printers\lib\x86_64-win64\win32 -FuD:\lazarus\components\ideintf\units\x86_64-win64\win32 -FuD:\lazarus\components\synedit\units\x86_64-win64\win32 -FuD:\lazarus\components\lazcontrols\lib\x86_64-win64\win32 -FuD:\lazarus\components\cairocanvas\lib\x86_64-win64\win32 -FuD:\lazarus\lcl\units\x86_64-win64\win32 -FuD:\lazarus\lcl\units\x86_64-win64 -FuD:\lazarus\components\freetype\lib\x86_64-win64 -FuD:\lazarus\components\codetools\units\x86_64-win64 -FuD:\lazarus\components\buildintf\units\x86_64-win64 -FuD:\lazarus\components\lazutils\lib\x86_64-win64 -FuD:\lazarus\packager\units\x86_64-win64 -FuC:\UAS_PEMROGRAMAN_VISUAL\UAS_PEMROGRAMAN_VISUAL\backup\ -FUC:\UAS_PEMROGRAMAN_VISUAL\UAS_PEMROGRAMAN_VISUAL\backup\lib\x86_64-win64\ -FEC:\UAS_PEMROGRAMAN_VISUAL\UAS_PEMROGRAMAN_VISUAL\backup\ -oC:\UAS_PEMROGRAMAN_VISUAL\UAS_PEMROGRAMAN_VISUAL\backup\project1.exe -dLCL -dLCLwin32 project1.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>

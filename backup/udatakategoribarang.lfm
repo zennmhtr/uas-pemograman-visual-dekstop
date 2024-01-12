@@ -1,0 +1,169 @@
+object frmDataKategoriBarang: TfrmDataKategoriBarang
+  Left = 534
+  Height = 619
+  Top = 194
+  Width = 864
+  Caption = 'FORM KATEGORI BARANG'
+  ClientHeight = 619
+  ClientWidth = 864
+  Color = clNone
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.0.0.3'
+  object DBGridKategori: TDBGrid
+    Left = 48
+    Height = 272
+    Top = 120
+    Width = 632
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    OnCellClick = DBGridKategoriCellClick
+  end
+  object Label1: TLabel
+    Left = 200
+    Height = 63
+    Top = 16
+    Width = 432
+    Caption = 'DATA KATEGORI BARANG'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object BtnDelete: TButton
+    Left = 712
+    Height = 48
+    Top = 176
+    Width = 96
+    Caption = 'DELETE'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    OnClick = BtnDeleteClick
+  end
+  object BtnCari: TButton
+    Left = 400
+    Height = 32
+    Top = 408
+    Width = 96
+    Caption = 'SEARCH'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+    OnClick = BtnCariClick
+  end
+  object edtCari: TEdit
+    Left = 48
+    Height = 32
+    Top = 408
+    Width = 320
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 3
+  end
+  object BtnReset: TButton
+    Left = 520
+    Height = 32
+    Top = 408
+    Width = 96
+    Caption = 'RESET'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 4
+    OnClick = BtnResetClick
+  end
+  object BtnAddKategori: TButton
+    Left = 712
+    Height = 40
+    Top = 120
+    Width = 96
+    Caption = 'INSERT'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 5
+    OnClick = BtnAddKategoriClick
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM kategori'
+    )
+    Params = <>
+    Macros = <>
+    Left = 72
+    Top = 256
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 344
+    Top = 256
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = SQLConnector1
+    Left = 152
+    Top = 256
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'latihan5'
+    KeepConnection = True
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    ConnectorType = 'ODBC'
+    Left = 248
+    Top = 256
+  end
+end

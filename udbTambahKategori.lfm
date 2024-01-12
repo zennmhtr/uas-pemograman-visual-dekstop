@@ -1,0 +1,119 @@
+object frmTambahKategori: TfrmTambahKategori
+  Left = 685
+  Height = 412
+  Top = 194
+  Width = 587
+  Caption = 'FORM TAMBAH KATEGORI'
+  ClientHeight = 412
+  ClientWidth = 587
+  Color = clNone
+  LCLVersion = '3.0.0.3'
+  object edtKategori: TEdit
+    Left = 207
+    Height = 32
+    Top = 136
+    Width = 227
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 144
+    Height = 60
+    Top = 16
+    Width = 314
+    Caption = 'TAMBAH KATEGORI'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -35
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object BtnTambahKategori: TButton
+    Left = 207
+    Height = 32
+    Top = 200
+    Width = 123
+    Caption = 'SAVE'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    OnClick = BtnTambahKategoriClick
+  end
+  object Label2: TLabel
+    Left = 48
+    Height = 27
+    Top = 136
+    Width = 120
+    AutoSize = False
+    Caption = 'Nama Kategori'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM kategori'
+    )
+    Params = <>
+    Macros = <>
+    Left = 496
+    Top = 336
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 496
+    Top = 248
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'latihan5'
+    KeepConnection = True
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    ConnectorType = 'ODBC'
+    Left = 496
+    Top = 168
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = SQLConnector1
+    Left = 496
+    Top = 88
+  end
+end

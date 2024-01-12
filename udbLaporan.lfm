@@ -1,0 +1,317 @@
+object TfrmReport: TTfrmReport
+  Left = 450
+  Height = 710
+  Top = 189
+  Width = 1026
+  Caption = 'REPORT TRANSAKSI'
+  ClientHeight = 710
+  ClientWidth = 1026
+  Color = clNone
+  OnCreate = FormCreate
+  LCLVersion = '3.0.0.3'
+  object DBGrid1: TDBGrid
+    Left = 48
+    Height = 336
+    Top = 216
+    Width = 952
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnCari: TButton
+    Left = 736
+    Height = 31
+    Top = 120
+    Width = 107
+    Caption = 'SEARCH'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    OnClick = btnCariClick
+  end
+  object ECari: TEdit
+    Left = 464
+    Height = 31
+    Top = 120
+    Width = 224
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+    TextHint = 'Nama Customer'
+  end
+  object btnReset: TButton
+    Left = 872
+    Height = 31
+    Top = 120
+    Width = 107
+    Caption = 'RESET'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnResetClick
+  end
+  object Label1: TLabel
+    Left = 360
+    Height = 60
+    Top = 16
+    Width = 348
+    Caption = 'LAPORAN TRANSAKSI'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -35
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object btnLaporan: TButton
+    Left = 48
+    Height = 40
+    Top = 152
+    Width = 107
+    Caption = 'PRINT'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnLaporanClick
+  end
+  object DateEdit1: TDateEdit
+    Left = 464
+    Height = 31
+    Top = 168
+    Width = 213
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 23
+    AutoSize = False
+    NumGlyphs = 1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Label2: TLabel
+    Left = 208
+    Height = 17
+    Top = 288
+    Width = 35
+    Caption = 'From:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DateEdit2: TDateEdit
+    Left = 776
+    Height = 31
+    Top = 168
+    Width = 224
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 23
+    AutoSize = False
+    NumGlyphs = 1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Label3: TLabel
+    Left = 432
+    Height = 17
+    Top = 288
+    Width = 17
+    Caption = 'To:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 720
+    Height = 27
+    Top = 168
+    Width = 32
+    Caption = ' TO :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 328
+    Height = 27
+    Top = 168
+    Width = 94
+    Caption = 'FROM DATE :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 376
+    Top = 584
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'customer'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'tanggal_transaksi'
+        DataType = ftDateTime
+        Precision = -1
+      end    
+      item
+        Name = 'jumlah'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'diskon_beli_barang'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'diskon_transaksi'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'sub_total'
+        DataType = ftFloat
+        Precision = -1
+      end    
+      item
+        Name = 'total'
+        DataType = ftFloat
+        Precision = -1
+      end    
+      item
+        Name = 'harga_beli'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'harga_jual'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'nama_barang'
+        DataType = ftString
+        Precision = -1
+        Size = 60
+      end    
+      item
+        Name = 'kategori'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT dt.id, t.customer, t.tanggal as tanggal_transaksi, dt.jumlah, dt.diskon as diskon_beli_barang, t.diskon as diskon_transaksi, t.sub_total, t.total, db.harga_beli, db.harga_jual, db.nama as nama_barang, k.nama as kategori FROM detail_transaksi as dt JOIN data_barang as db ON db.id = dt.barang_id JOIN kategori as k ON k.id = db.kategori_id JOIN transaksi as t ON dt.transaksi_id = t.id;'
+    )
+    Params = <>
+    Macros = <>
+    Left = 176
+    Top = 584
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'latihan5'
+    KeepConnection = True
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    ConnectorType = 'ODBC'
+    Left = 280
+    Top = 584
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = SQLConnector1
+    Left = 64
+    Top = 584
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 480
+    Top = 584
+  end
+  object frDBDataSet1: TfrDBDataSet
+    CloseDataSource = True
+    DataSet = SQLQuery1
+    Left = 584
+    Top = 584
+  end
+end

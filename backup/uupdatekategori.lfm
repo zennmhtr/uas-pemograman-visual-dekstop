@@ -1,0 +1,120 @@
+object frmUbahKategori: TfrmUbahKategori
+  Left = 632
+  Height = 404
+  Top = 195
+  Width = 599
+  Caption = 'FORM UBAH KATEGORI'
+  ClientHeight = 404
+  ClientWidth = 599
+  Color = clNone
+  OnCreate = FormCreate
+  LCLVersion = '3.0.0.3'
+  object edtKategori: TEdit
+    Left = 192
+    Height = 27
+    Top = 136
+    Width = 245
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnUpdate: TButton
+    Left = 192
+    Height = 33
+    Top = 192
+    Width = 123
+    Caption = 'UPDATE'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    OnClick = btnUpdateClick
+  end
+  object Label1: TLabel
+    Left = 184
+    Height = 60
+    Top = 16
+    Width = 265
+    Caption = 'UBAH KATEGORI'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -35
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 27
+    Top = 136
+    Width = 120
+    AutoSize = False
+    Caption = 'Nama Kategori'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = SQLConnector1
+    Left = 544
+    Top = 224
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'latihan5'
+    KeepConnection = True
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    ConnectorType = 'ODBC'
+    Left = 544
+    Top = 296
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 544
+    Top = 144
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM kategori WHERE id;'
+    )
+    Params = <>
+    Macros = <>
+    Left = 544
+    Top = 72
+  end
+end

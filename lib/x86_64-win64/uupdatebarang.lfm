@@ -1,0 +1,363 @@
+object frmUpdateBarang: TfrmUpdateBarang
+  Left = 714
+  Height = 598
+  Top = 250
+  Width = 759
+  Caption = 'FORM UBAH BARANG'
+  ClientHeight = 598
+  ClientWidth = 759
+  Color = clNone
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.0.0.3'
+  object Label1: TLabel
+    Left = 224
+    Height = 60
+    Top = 11
+    Width = 335
+    Caption = 'UBAH DATA BARANG'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -35
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtNama: TEdit
+    Left = 192
+    Height = 28
+    Top = 184
+    Width = 216
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object edtHargaBeli: TEdit
+    Left = 192
+    Height = 31
+    Top = 300
+    Width = 216
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+  end
+  object edtHargaJual: TEdit
+    Left = 192
+    Height = 28
+    Top = 359
+    Width = 216
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+  end
+  object edtJumlahStok: TEdit
+    Left = 192
+    Height = 27
+    Top = 416
+    Width = 216
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 3
+  end
+  object btnSimpan: TButton
+    Left = 192
+    Height = 40
+    Top = 472
+    Width = 104
+    Caption = 'UPDATE'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnSimpanClick
+  end
+  object Label7: TLabel
+    Left = 64
+    Height = 27
+    Top = 120
+    Width = 71
+    Caption = ' ID Barang'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBLookupId: TDBLookupComboBox
+    Left = 192
+    Height = 33
+    Top = 120
+    Width = 168
+    DataField = 'id'
+    DataSource = DataSource3
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    KeyField = 'id'
+    ListField = 'id'
+    ListFieldIndex = 0
+    ListSource = DataSource3
+    LookupCache = False
+    OnEditingDone = DBLookupIdChange
+    OnSelect = DBLookupIdChange
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Label8: TLabel
+    Left = 64
+    Height = 27
+    Top = 184
+    Width = 92
+    Caption = 'Nama Barang'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 64
+    Height = 27
+    Top = 243
+    Width = 96
+    Caption = 'Jenis Kategori'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBLookupkategori: TDBLookupComboBox
+    Left = 192
+    Height = 33
+    Top = 243
+    Width = 168
+    DataField = 'id'
+    DataSource = DataSource1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    KeyField = 'id'
+    ListField = 'nama'
+    ListFieldIndex = 0
+    ListSource = DataSource1
+    LookupCache = False
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Label10: TLabel
+    Left = 64
+    Height = 27
+    Top = 300
+    Width = 71
+    Caption = 'Harga Beli'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 64
+    Height = 27
+    Top = 360
+    Width = 72
+    Caption = 'Harga Jual'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 64
+    Height = 27
+    Top = 416
+    Width = 83
+    Caption = 'Jumlah Stok'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 584
+    Top = 48
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM kategori WHERE id;'
+    )
+    RefreshSQL.Strings = (
+      'SELECT * FROM kategori;'
+    )
+    Params = <>
+    Macros = <>
+    MacroCheck = True
+    Left = 584
+    Top = 128
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = SQLConnector1
+    Left = 688
+    Top = 296
+  end
+  object SQLQuery2: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM kategori;'
+    )
+    Params = <>
+    Macros = <>
+    Left = 688
+    Top = 128
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLQuery2
+    Left = 688
+    Top = 48
+  end
+  object DataSource3: TDataSource
+    DataSet = SQLQuery3
+    Left = 688
+    Top = 208
+  end
+  object SQLQuery3: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 60
+      end    
+      item
+        Name = 'kategori_id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'harga_beli'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'harga_jual'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'stok'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM data_barang;'
+    )
+    RefreshSQL.Strings = (
+      'SELECT * FROM data_barang;'
+    )
+    Params = <>
+    Macros = <>
+    Left = 584
+    Top = 208
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'latihan5'
+    KeepConnection = True
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    ConnectorType = 'ODBC'
+    Left = 584
+    Top = 296
+  end
+end

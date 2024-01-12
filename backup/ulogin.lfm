@@ -1,0 +1,177 @@
+object frmLogin: TfrmLogin
+  Left = 668
+  Height = 475
+  Top = 273
+  Width = 663
+  Caption = 'FORM LOGIN'
+  ClientHeight = 475
+  ClientWidth = 663
+  Color = clNone
+  LCLVersion = '3.0.0.3'
+  object Label1: TLabel
+    Left = 280
+    Height = 63
+    Top = 16
+    Width = 108
+    Caption = 'LOGIN'
+    Color = clNone
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object BLogin: TButton
+    Left = 160
+    Height = 33
+    Top = 312
+    Width = 96
+    Caption = 'LOGIN'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    OnClick = BLoginClick
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 27
+    Top = 136
+    Width = 69
+    Caption = 'Username'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 27
+    Top = 200
+    Width = 64
+    Caption = 'Password'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtUsername: TEdit
+    Left = 160
+    Height = 32
+    Top = 136
+    Width = 240
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+  end
+  object edtPassword: TEdit
+    Left = 160
+    Height = 33
+    Top = 200
+    Width = 240
+    EchoMode = emPassword
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object BExit: TButton
+    Left = 320
+    Height = 33
+    Top = 312
+    Width = 88
+    Caption = 'EXIT'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Dubai'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = BExitClick
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'username'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'password'
+        DataType = ftString
+        Precision = -1
+        Size = 250
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 200
+      end    
+      item
+        Name = 'role'
+        DataType = ftSmallint
+        Precision = -1
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM user'
+    )
+    Params = <>
+    Macros = <>
+    Left = 544
+    Top = 101
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'latihan5'
+    KeepConnection = True
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    ConnectorType = 'ODBC'
+    Left = 544
+    Top = 200
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = SQLConnector1
+    Left = 544
+    Top = 296
+  end
+end
