@@ -9,6 +9,7 @@ Aplikasi Penjualan Barang ini menggunakan sebuah Aplikasi Editor yaitu Lazarus y
 - Kelas    : TI . 21 . A3
 
 ***Komponen - Komponen***
+<br>
 **1. Aplikasi Lazarus**
 **2. ODBC Connector**
 **3. XAMPP v3.3.0**
